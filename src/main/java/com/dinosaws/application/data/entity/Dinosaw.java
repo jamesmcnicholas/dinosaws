@@ -1,34 +1,28 @@
-package com.dinosaws.model;
+package com.dinosaws.application.data.entity;
 
+import com.example.application.data.AbstractEntity;
 import com.vaadin.flow.component.html.Image;
-
+import javax.persistence.Entity;
+import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dinosaw {
+@Entity
+public class Dinosaw extends AbstractEntity {
     private String name;
-    private List<Image> images;
+//    private List<Image> images;
     private Image latestImage;
     private String description;
 
-    public Dinosaw(String name, String description) {
-        this.name = name;
-        this.description = description;
-        images = new ArrayList<>();
+    public void addImage(Image image){
+//        this.images.add(image);
+        this.latestImage = image;
     }
 
-    public Dinosaw(String name, String description, Image latestImage) {
+    public Dinosaw(String name, Image latestImage, String description) {
         this.name = name;
         this.latestImage = latestImage;
         this.description = description;
-
-        images = new ArrayList<>();
-        images.add(latestImage);
-    }
-
-    public void addImage(Image image){
-        this.images.add(image);
-        this.latestImage = image;
     }
 
     public String getName() {

@@ -1,6 +1,6 @@
 package com.dinosaws.application.views.main;
 
-import com.dinosaws.model.Dinosaw;
+import com.dinosaws.application.data.entity.Dinosaw;
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
